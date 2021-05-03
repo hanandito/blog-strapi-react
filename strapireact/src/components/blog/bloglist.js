@@ -21,16 +21,18 @@ class BlogList extends React.Component{
   render(){
     return(
       <div>
+        <div className="container">
+              <div className="row">
         {
           this.state.blogs.map(({id, blogtitle, blogcontent, featuredimage, categories})=>(
-            <div className="container">
-              <div className="row">
+            
                 <BlogListItem key ={id} blogid={id} blogtitle={blogtitle} blogcontent={blogcontent} featuredimage={featuredimage} categories={categories} />
-              </div>
-            </div>
+
           ))
           
         }
+            </div>
+        </div>
       </div>
     )
   }
